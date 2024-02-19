@@ -1,0 +1,105 @@
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    % colorlinks=true,
+    % linkcolor=cyan,
+    % filecolor=magenta,      
+    % urlcolor=blue,
+}
+\usepackage{fontawesome} 
+% \usepackage[hidelinks]{hyperref}
+\begin{document}
+\pagenumbering{gobble}
+
+%***"%"后面的所有内容是注释而非代码，不会输出到最后的PDF中
+%***使用本模板，只需要参照输出的PDF，在本文档的相应位置做简单替换即可
+%***修改之后，输出更新后的PDF，只需要点击Overleaf中的“Recompile”按钮即可
+
+%在大括号内填写其他信息，最多填写4个，但是如果选择不填信息，
+%那么大括号必须空着不写，而不能删除大括号。
+%\otherInfo后面的四个大括号里的所有信息都会在一行输出
+%如果想要写两行，那就用两次这个指令（\otherInfo{}{}{}{}）即可
+
+
+%***********个人信息**************
+\MyName{赖澄宇}
+\sepspace
+\contactInfo{\faEnvelope \ laichengyu@zju.edu.cn}{\faPhone \ 18870756356}{\faGithub\    https://github.com/cycl2018}
+% \SimpleEntry{laichengyu@zju.edu.cn}
+% \SimpleEntry{18870756356}
+% \faGithub  https://github.com/cycl2018
+
+%***********教育背景**************
+\section{教育背景}
+%***第一个大括号里的内容向左对齐，第二个大括号里的内容向右对齐
+%***\textbf{}括号里的字是粗体，\textit{}括号里的字是斜体
+\datedsubsection{\textbf{浙江大学}，{软件工程}，\textit{硕士}}{2022.9 - 2025.3}
+\begin{itemize}
+  \item 主要研究方向:图神经网络，图异常检测，数据挖掘，推荐系统
+\end{itemize}
+\datedsubsection{\textbf{南昌大学}，数据科学与大数据技术，\textit{学士}}{2018.9 - 2022.6}
+\begin{itemize}
+  \item \textbf{专业排名第一} 
+  \item 校级特等奖学金、校三好学生、优秀毕业生
+\end{itemize}
+\section{竞赛经历}
+% \datedsubsection{\textbf{比赛方面}:}{}
+\datedsubsection{天池CIKM 2022 AnalytiCup Competition\ \textbf{冠军}}{2022}
+\datedsubsection{Kaggle AI Village Capture the Flag @ DEFCON\ \textbf{亚军}}{2022}
+\datedsubsection{华为云 GaussDB 数据库挑战赛\ \textbf{亚军}}{2021}
+\datedsubsection{CCF-BDCI 泛在感知数据关联融合计算\ \textbf{亚军}}{2021}
+\datedsubsection{ACM-ICPC亚洲区域赛南京站\ \textbf{银奖}(Rank 39)}{2020}
+\datedsubsection{ACM-ICPC江西省赛\ \textbf{金奖(冠军)}}{2020}
+
+
+\section{科研经历}
+\datedsubsection{Better Late Than Never: Formulating and Benchmarking
+Recommendation Editing}{2024}
+\begin{itemize}
+    \item KDD2024(在投)\ \ \ \ \ \ \ \ \ \ \ \ 研究邻域:\textbf{推荐系统|模型编辑}
+    \item 我们提出了一种全新的可编辑推荐任务，旨在无需访问原始训练数据或重新训练模型的情况下，从推荐系统中删除不恰当的推荐项。我们定义了三个基本目标：严格纠正、协同纠正和集中纠正，并设计了三种评估指标来定量衡量每个目标的完成度。此外，我们提出了一个新颖的Editing BPR Loss，并通过一系列从相关领域借鉴的方法建立了一个综合基准测试，以验证所提方法的有效性。
+
+\end{itemize}
+\datedsubsection{Frequency Self-Adaptation Graph Neural Network for Unsupervised Graph Anomaly Detection}{2024}
+\begin{itemize}
+    \item IJCAI2024(在投)\ \ \ \ \ \ \ \ \ \ \ \ 研究邻域:\textbf{图神经网络|异常检测|对比学习}
+    \item 我们针对图节点异常检测中异常节点导致的图信号频率偏移问题，设计实现了一种全新的无监督频率自适应图神经网络SAG，通过将全通信号作为参考，自适应地融合来自多个频带的信号。它以自监督的方式进行优化，并为无监督的图异常检测产生有效表征，SAG相比于现有最先进模型性能提升5\%至10\%。
+\end{itemize}
+
+
+% \datedsubsection{}{2024}
+%***********过往经历**************
+\section{项目经历}
+\datedsubsection{\textbf{无监督图异常检测算法库DGLD}\ \ \  \href{https://github.com/eaglelab-zju/DGLD}{\faGithub}}{2022.6 - 至今}
+\begin{itemize}
+    \item \textbf{背景:}DGLD是一个基于PyTorch和DGL的深度图异常检测开源库。它提供了流行的图形异常检测方法的统一接口，包括数据加载器、数据扩充、模型训练和评估。
+    \item \textbf{技术栈:图神经网络|异常检测|无监督学习}
+    \item 我作为项目主要贡献者，参与了项目搭建，维护，以及开源算法的贡献，复现并集成了包括GUIDE，GAAN，AAGNN在内的多个图异常检测算法，搭建项目环境，设计项目主体框架，后期维护等。
+\end{itemize}
+
+
+\datedsubsection{\textbf{图联邦异质任务学习}\textbf{CIKM CUP}\ \ \  \href{https://github.com/eaglelab-zju/CIKMCup2022-top1}{\faGithub}}{2022.8 - 2022.9}
+\begin{itemize}
+    \item \textbf{背景:}本项目面向分子图的任务异质联邦场景，某些参与者的目标是对分子的类型进行判断，即分类任务，另外部分参与者的目标是预测分子化学性质的强弱，即回归任务。在这种任务场景下，虽然参与者都要求训练得到的模型具有对分子图表征的理解能力，但是其具体的学习目标是完全不同的，相比数据分布的异质性更具挑战性。
+    \item \textbf{技术栈:图数据网络|联邦学习|自监督学习}
+    \item 由于不同客户端所拥有的图的节点属性、标签各不相同，相关性较弱，但所拥有的图结构是类似的甚至可能是相连接的，具有较强的相关性。我们只利用结构信息来进行联邦学习，同时采样相同的自监督学习任务(GraphMAE)来统一不同客户端的任务，采用SGD的方式在服务端依次训练公共模型获取图的结构表征。
+    \item  利用公共模型获取的结构表征和客户端自身拥有的属性和标签，在各个客户端内部训练私有模型进行预测。
+    \item \textbf{结果:}取得比赛冠军，性能领先第二名1.6\%
+\end{itemize}
+
+
+\section{专业技能}
+\begin{itemize}
+  \item 熟悉Python、C、C++
+  \item 熟悉深度学习框架PyTorch、图神经网络框架DGL、PyG
+  \item 熟悉Linux、Git基本操作
+\end{itemize}
+\sepspace
+
+
+
+\end{document}
